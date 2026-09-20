@@ -14,7 +14,23 @@ nav, .actions__menu-container {
   line-height: 105%;
 }
 
-.main__video-container p {
+.main__coffe-container h2 {
+  color: #403F3D;
+  font-family: "Inter", sans-serif;
+  font-size: 60px;
+  font-weight: 600;
+  line-height: 125%;
+}
+
+.coffe__carousel-container .coffe-container h3, .coffe__carousel-container .coffe-container span {
+  color: #403F3D;
+  font-family: "Inter", sans-serif;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 125%;
+}
+
+.coffe__carousel-container .coffe-container p, .main__video-container p {
   font-size: 16px;
   font-weight: 400;
   line-height: 150%;
@@ -97,6 +113,82 @@ main {
 body {
   background-color: #E1D4C9;
   width: 100%;
+}
+
+.main__coffe-container {
+  width: 100%;
+  min-height: 800px;
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+}
+.main__coffe-container h2 {
+  text-align: center;
+  margin-bottom: 40px;
+}
+.main__coffe-container h2 span {
+  color: #B0907A;
+  font-style: italic;
+}
+
+.coffe__carousel-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+}
+.coffe__carousel-container .arrow {
+  display: flex;
+  flex-grow: 0;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid;
+  border-radius: 35px;
+  border-color: #403F3D;
+  color: #403F3D;
+  height: 60px;
+  width: 60px;
+}
+.coffe__carousel-container .arrow:hover {
+  background-color: #665F55;
+  color: #E1D4C9;
+  border-color: #E1D4C9;
+}
+.coffe__carousel-container .carousel {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.coffe__carousel-container .coffe-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  max-width: 480px;
+}
+.coffe__carousel-container .coffe-container .coffe__description {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 16px;
+}
+.coffe__carousel-container .coffe-container p {
+  color: #403F3D;
+}
+.coffe__carousel-container .coffe-container .slider-dot {
+  width: 40px;
+  height: 4px;
+  padding: 0;
+  border: none;
+  border-radius: 10px;
+  background-color: #665F55;
+}
+.coffe__carousel-container .coffe-container .slider-dot.active {
+  background-color: #403F3D;
 }
 
 header {

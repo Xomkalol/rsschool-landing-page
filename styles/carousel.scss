@@ -1,0 +1,99 @@
+@use 'fonts';
+@use 'colors';
+@use 'assets';
+
+.main__coffe-container {
+    width: 100%;
+    min-height: 800px;
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    h2 {
+        @extend %heading-2;
+        text-align: center;
+        margin-bottom: 40px;
+        span {
+            color: colors.$accent;
+            font-style: italic;
+        }
+    }
+}
+
+.coffe__carousel-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+
+    .arrow {
+        display: flex;
+        flex-grow: 0;
+        align-items: center;
+        justify-content: center;
+        border: 2px solid;
+        border-radius: 35px;
+        border-color: fonts.$text-primary;
+        color: fonts.$text-primary;
+        height: 60px;
+        width: 60px;
+    }
+
+    .arrow:hover {
+        background-color: colors.$border-primary;
+        color: fonts.$text-inverse;
+        border-color: fonts.$text-inverse;
+    }
+
+    .carousel{
+        flex-grow: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .coffe-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        max-width: 480px;
+
+        .coffe__description {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            gap: 16px;
+        }
+
+        h3 {
+            @extend %heading-3;
+        }
+
+        p {
+            @extend %body-medium;
+            color: fonts.$text-primary;
+        }
+
+        span {
+            @extend %heading-3;
+        }
+
+        .slider-dot {
+            width: 40px;
+            height: 4px;
+            padding: 0;
+            border: none;
+            border-radius: 10px;
+            background-color: colors.$border-primary;
+
+            &.active {
+            background-color: fonts.$text-primary;
+            }
+        }
+    }
+}
+
+

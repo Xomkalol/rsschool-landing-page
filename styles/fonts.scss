@@ -20,6 +20,22 @@ $font-primary: 'Inter', sans-serif;
     line-height:  105%;
 }
 
+%heading-2 {
+    color: $text-primary;
+    font-family: $font-primary;
+    font-size: 60px;
+    font-weight: 600;
+    line-height: 125%;
+}
+
+%heading-3 {
+    color: $text-primary;
+    font-family: $font-primary;
+    font-size: 24px;
+    font-weight: 600;
+    line-height:  125%;
+}
+
 %body-medium {
     $font-primary: 'Inter', sans-serif;
     font-size: 16px;
