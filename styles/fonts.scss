@@ -1,0 +1,11 @@
+
+$text-primary: #403F3D;
+$font-primary: 'Inter', sans-serif;
+
+%text-primary {
+    color: $text-primary;
+    font-family: $font-primary;
+    font-size: 24px;
+    font-weight: 600;
+    line-height:  125%;
+}
