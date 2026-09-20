@@ -1,0 +1,77 @@
+@use 'fonts';
+@use 'colors';
+@use 'assets';
+
+main {
+    margin: 0 40px;
+}
+
+.main__video-container {
+    position: relative;
+    max-height: 644px;
+
+    video {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        border-radius: 25px;
+        z-index: 1;
+        object-fit: cover;
+        max-height: 644px;
+        }
+
+    .video__text-container {
+        position: absolute;
+        z-index: 2;
+        left: 100px;
+        top: 100px;
+        width: 530px;
+        height: 444px;
+        display: flex;
+        gap: 40px;
+        flex-direction: column;
+    }
+
+    h1 {
+        @extend %heading-1;
+        color:fonts.$text-inverse;
+
+        span {
+            color:fonts.$text-accent;
+        }
+    }
+
+    p {
+        @extend %body-medium;
+        color:fonts.$text-inverse;
+    }
+
+    button {
+        @extend %button-style;
+        display: flex;
+        gap: 8px;
+        align-items: center;
+        position: relative;
+
+        img {
+            position: absolute;
+            right: 55px;
+            opacity: 0;
+            transform: scaleX(0);
+            transform-origin: left;
+            transition:
+            transform 0.3s ease,
+            opacity 0.3s ease;
+        }
+    }
+
+    button:hover {
+        img {
+            opacity: 1;
+            transform: scaleX(1);
+        }
+    }
+
+
+}
+
