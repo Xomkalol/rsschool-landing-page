@@ -1,0 +1,73 @@
+@use 'fonts';
+@use 'colors';
+@use 'assets';
+
+.footer__container {
+   // width: 100%;
+    max-height: 450px;
+    background-color: colors.$background-container;
+    margin: 0 40px;
+    margin-bottom: 40px;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    padding: 100px;
+    gap: 100px;
+}
+
+.footer__social-container {
+    width: 100%;
+    max-width: 530px;
+    
+    h2 {
+        @extend %heading-2;
+        color: fonts.$text-accent;
+        span {
+           color: fonts.$text-inverse;
+        }
+    }
+
+    .social {
+        display: flex;
+        gap: 12px;
+    }
+    button {
+        width: 60px;
+        height: 60px;
+        border: 1px solid fonts.$text-inverse;
+        border-radius: 30px;
+        color: fonts.$text-inverse;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    button:hover {
+        color: fonts.$text-primary;
+        background-color: colors.$background-page;
+    }
+}
+
+.footer__contacts-container {
+    width: 100%;
+    display: flex;
+    gap: 40px;
+    flex-direction: column;
+    justify-content: flex-start;
+    color: fonts.$text-inverse;
+    justify-content: center;
+
+    h3 {
+        @extend %heading-3;
+        color: fonts.$text-inverse;
+    }
+
+    .contacts {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        div {
+            display: flex;
+        }
+    }
+}
