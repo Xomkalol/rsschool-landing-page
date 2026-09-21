@@ -14,7 +14,7 @@ nav, .actions__menu-container {
   line-height: 105%;
 }
 
-.app__about h2, .grid-container h2, .main__coffe-container h2, .footer__social-container h2 {
+.menu__container h1, .app__about h2, .grid-container h2, .main__coffe-container h2, .footer__social-container h2 {
   color: #403F3D;
   font-family: "Inter", sans-serif;
   font-size: 60px;
@@ -37,7 +37,7 @@ nav, .actions__menu-container {
   line-height: 150%;
 }
 
-.app__button-container button span, .app__button-container button, .main__video-container button {
+.menu__container .category, .app__button-container button span, .app__button-container button, .main__video-container button {
   font-family: "Inter", sans-serif;
   color: #403F3D;
   font-size: 16px;
@@ -515,6 +515,51 @@ textarea {
 table {
   border-collapse: collapse;
   border-spacing: 0;
+}
+
+.menu__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  flex-direction: column;
+}
+.menu__container h1 {
+  text-align: center;
+  max-width: 800px;
+}
+.menu__container h1 span {
+  color: #B0907A;
+  font-style: italic;
+}
+.menu__container .menu__categories {
+  display: flex;
+  gap: 16px;
+}
+.menu__container .category {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  justify-content: center;
+  padding: 8px;
+  border: 1px solid;
+  border-color: #665F55;
+  border-radius: 25px;
+}
+.menu__container .category .category__icon {
+  border: 1px solid;
+  border-color: #665F55;
+  background-color: #665F55;
+  border-radius: 25px;
+  padding: 5px;
+}
+.menu__container .category--active {
+  border-color: #665F55;
+  background-color: #665F55;
+}
+.menu__container .category:hover {
+  border-color: #665F55;
+  background-color: #665F55;
 }
 
 /*# sourceMappingURL=style.css.map */

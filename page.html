@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu page</title>
+    <link rel="icon" href="assets/favicon.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+        <header>
+        <div class="header__container">
+            <div class="header__logo-container">
+                <a href="index.html">
+                    <img src="assets/logo.png" alt="coffe shop logo">
+                </a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#">Favorite coffee</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Mobile app</a></li>
+                    <li><a href="#">Contact us</a></li>
+                </ul>
+            </nav>
+            <div class="header__actions-container">
+                <div class="actions__theme-container">
+                    <div class="theme-light">
+                        <img src="assets/Sun.png">
+                    </div>
+                     <div class="theme-dark">
+                        <svg
+            class="theme-icon"
+            width="18"
+            height="18"
+            viewBox="0 0 18 18"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            >
+            <path
+                d="M9 0C4.03 0 0 4.03 0 9C0 13.97 4.03 18 9 18C13.97 18 18 13.97 18 9C18 8.54 17.96 8.08 17.9 7.64C16.92 9.01 15.32 9.9 13.5 9.9C10.52 9.9 8.1 7.48 8.1 4.5C8.1 2.69 8.99 1.08 10.36 0.1C9.92 0.04 9.46 0 9 0Z"
+                fill="currentColor"
+            />
+                        </svg>
+                    </div>
+                </div>
+                <div class="actions__menu-container">
+                    <button>
+                        <span>Menu</span>
+                        <img src="/assets/coffee-cup.png">
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="menu__container">
+                <h1 class="menu__title">
+                    Behind each of our cups
+                    hides an
+                    <span>amazing surprise</span>
+                </h1>
+                <div class="menu__categories">
+
+                    <button class="category category--active" type="button">
+                        <span class="category__icon">
+                            <img src="assets/coffe.png" alt="coffe img">
+                        </span>
+                        <span>Coffee</span>
+                    </button>
+
+                    <button class="category" type="button">
+                        <span class="category__icon">
+                           <img src="assets/tea.png" alt="tea img">
+                        </span>
+                        <span>Tea</span>
+                    </button>
+
+                    <button class="category" type="button">
+                        <span class="category__icon">
+                            <img src="assets/dessert.png" alt="dessert img">
+                        </span>
+                        <span>Dessert</span>
+                    </button>
+                </section>
+    </main>
+</body>
+</html>
