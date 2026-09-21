@@ -37,7 +37,7 @@
   line-height: 150%;
 }
 
-.menu__container .category, .app__button-container button span, .app__button-container button, .main__video-container button {
+.menu__container .category, .app__button-container button span, .app__button-container button, .main__video-container a {
   font-family: "Inter", sans-serif;
   color: #403F3D;
   font-size: 16px;
@@ -45,7 +45,7 @@
   line-height: 150%;
 }
 
-.app__button-container button, .main__video-container button {
+.app__button-container button, .main__video-container a {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -93,13 +93,13 @@ main {
 .main__video-container p {
   color: #E1D4C9;
 }
-.main__video-container button {
+.main__video-container a {
   display: flex;
   gap: 8px;
   align-items: center;
   position: relative;
 }
-.main__video-container button img {
+.main__video-container a img {
   position: absolute;
   right: 55px;
   opacity: 0;
@@ -107,7 +107,7 @@ main {
   transform-origin: left;
   transition: transform 0.3s ease, opacity 0.3s ease;
 }
-.main__video-container button:hover img {
+.main__video-container a:hover img {
   opacity: 1;
   transform: scaleX(1);
 }
@@ -432,7 +432,7 @@ nav ul a:hover::after {
 .header__actions-container .actions__theme-container .theme-dark {
   color: #403F3D;
 }
-.header__actions-container button {
+.header__actions-container a {
   display: flex;
 }
 

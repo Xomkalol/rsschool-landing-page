@@ -46,7 +46,7 @@ main {
         color:fonts.$text-inverse;
     }
 
-    button {
+    a {
         @extend %button-style;
         display: flex;
         gap: 8px;
@@ -65,7 +65,7 @@ main {
         }
     }
 
-    button:hover {
+    a:hover {
         img {
             opacity: 1;
             transform: scaleX(1);
