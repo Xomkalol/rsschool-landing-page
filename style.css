@@ -14,7 +14,7 @@ nav, .actions__menu-container {
   line-height: 105%;
 }
 
-.grid-container h2, .main__coffe-container h2 {
+.app__about h2, .grid-container h2, .main__coffe-container h2 {
   color: #403F3D;
   font-family: "Inter", sans-serif;
   font-size: 60px;
@@ -30,20 +30,22 @@ nav, .actions__menu-container {
   line-height: 125%;
 }
 
-.coffe__carousel-container .coffe-container p, .main__video-container p {
+.app__about p, .coffe__carousel-container .coffe-container p, .main__video-container p {
+  font-family: "Inter", sans-serif;
   font-size: 16px;
   font-weight: 400;
   line-height: 150%;
 }
 
-.main__video-container button {
+.app__button-container button span, .app__button-container button, .main__video-container button {
+  font-family: "Inter", sans-serif;
   color: #403F3D;
   font-size: 16px;
   font-weight: 600;
   line-height: 150%;
 }
 
-.main__video-container button {
+.app__button-container button, .main__video-container button {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -228,6 +230,61 @@ body {
 }
 .grid__column:first-child img:last-child, .grid__column:last-child img:first-child {
   height: 300px;
+}
+
+.main__app {
+  width: 100%;
+  height: 100vh;
+}
+
+.app__container {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  gap: 100px;
+  justify-content: center;
+  align-items: center;
+}
+
+.app__image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.app__about {
+  height: 100%;
+  display: flex;
+  gap: 40px;
+  flex-direction: column;
+  justify-content: center;
+}
+.app__about h2 span {
+  font-style: italic;
+  color: #B0907A;
+}
+.app__about p {
+  color: #403F3D;
+}
+
+.app__button-container {
+  display: flex;
+  gap: 20px;
+}
+.app__button-container button {
+  border: 1px solid;
+  border-radius: 30px;
+  border-color: #403F3D;
+}
+.app__button-container button:hover {
+  background-color: #403F3D;
+  color: #E1D4C9;
+}
+.app__button-container button:hover span {
+  color: #E1D4C9;
+}
+.app__button-container button:hover svg {
+  color: #E1D4C9;
 }
 
 header {

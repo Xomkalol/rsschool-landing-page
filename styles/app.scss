@@ -1,0 +1,71 @@
+@use 'fonts';
+@use 'colors';
+@use 'assets';
+
+.main__app {
+    width: 100%;
+    height: 100vh;
+}
+
+.app__container {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    gap: 100px;
+    justify-content: center;
+    align-items: center;
+}
+
+.app__image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.app__about {
+    height: 100%;
+    display: flex;
+    gap: 40px;
+    flex-direction: column;
+    justify-content: center;
+
+    h2 {
+        @extend %heading-2;
+        span {
+            font-style: italic;
+            color: fonts.$text-accent;
+        } 
+    }
+    p {
+        @extend %body-medium;
+        color: fonts.$text-primary;
+    }
+}
+
+.app__button-container {
+    display: flex;
+    gap: 20px;
+
+    button {
+        @extend %button-style;
+        border: 1px solid;
+        border-radius: 30px;
+        border-color: fonts.$text-primary;
+        span {
+            @extend %action-text;
+        }
+    }
+
+    button:hover {
+        background-color: fonts.$text-primary;
+        color: fonts.$text-inverse;
+
+        span {
+            color: fonts.$text-inverse;
+        }
+
+        svg {
+            color: fonts.$text-inverse;
+        }
+    }
+}
