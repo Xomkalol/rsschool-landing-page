@@ -159,3 +159,67 @@
         }
     }
 }
+
+@media (max-width: 600px) {
+
+    .main__coffe-container {
+        margin-top: 40px;
+
+        h2 {
+            font-size: 24px;
+            line-height: 125%;
+            margin-bottom: 20px;
+        }
+    }
+
+    .coffe__carousel-container {
+        gap: 8px;
+
+        .arrow {
+            width: 32px;
+            height: 32px;
+            border-width: 1px;
+
+            svg {
+                width: 10px;
+                height: 10px;
+            }
+        }
+
+        .carousel {
+            min-width: 0;
+        }
+
+        .coffe-container {
+            max-width: 220px;
+
+            img {
+                width: 180px;
+                height: auto;
+            }
+
+            .coffe__description {
+                gap: 8px;
+            }
+
+            h3 {
+                font-size: 12px;
+                line-height: 125%;
+            }
+
+            p {
+                font-size: 8px;
+                line-height: 140%;
+            }
+
+            span {
+                font-size: 14px;
+            }
+
+            .slider-dot {
+                width: 20px;
+                height: 2px;
+            }
+        }
+    }
+}

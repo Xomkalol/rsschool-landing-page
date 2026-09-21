@@ -91,3 +91,34 @@
         }
     }
 }
+
+@media (max-width: 600px) {
+
+    .main__grid {
+        margin-bottom: 60px;
+    }
+
+    .grid-container {
+        gap: 20px;
+        text-align: left;
+
+        h2 {
+            font-size: 24px;
+            line-height: 125%;
+        }
+    }
+
+    .grid {
+        gap: 15px;
+
+        img {
+            border-radius: 12px;
+        }
+
+        &__column:first-child img:first-child,
+        &__column:last-child img:last-child {
+            height: auto;
+            aspect-ratio: 1 / 1;
+        }
+    }
+}
