@@ -1,0 +1,65 @@
+@use 'fonts';
+@use 'colors';
+@use 'assets';
+
+
+.coffee-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    margin-top: 40px;
+    width: 100%;
+    margin-bottom: 40px;
+}
+
+.coffee-card {
+    overflow: hidden;
+
+    border: 1px solid colors.$border-primary;
+    border-radius: 40px;
+
+    color: fonts.$text-primary;
+
+    &__image {
+        width: 100%;
+        height: 300px;
+
+        overflow: hidden;
+
+        img {
+            display: block;
+            width: 100%;
+            height: 100%;
+
+            object-fit: cover;
+        }
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+
+        min-height: 200px;
+        padding: 20px 20px 20px;
+
+        h2 {
+            margin-bottom: 10px;
+
+            @extend %text-primary;
+        }
+
+        p {
+            @extend %body-medium;
+
+            margin-bottom: auto;
+        }
+    }
+
+    &__price {
+        display: block;
+
+        margin-top: 20px;
+
+        @extend %text-primary;
+    }
+}
