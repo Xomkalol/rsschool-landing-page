@@ -75,3 +75,44 @@ main {
 
 }
 
+@media (max-width: 768px) {
+
+    main {
+        margin: 0 15px;
+    }
+
+    .main__video-container {
+        max-height: none;
+
+        video {
+            height: 600px;
+            max-height: 600px;
+            object-fit: cover;
+            border-radius: 15px;
+        }
+
+        .video__text-container {
+            left: 60px;
+            top: 60px;
+
+            width: calc(100% - 120px);
+            height: auto;
+
+            gap: 30px;
+        }
+
+        h1 {
+            font-size: 42px;
+            line-height: 110%;
+        }
+
+        p {
+            font-size: 14px;
+            line-height: 150%;
+        }
+
+        a {
+            width: 200px;
+        }
+    }
+}

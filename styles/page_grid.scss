@@ -63,3 +63,25 @@
         @extend %text-primary;
     }
 }
+
+@media (max-width: 768px) {
+
+    .coffee-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+
+        margin-top: 32px;
+    }
+
+    .coffee-card {
+
+        &__image {
+            height: 250px;
+        }
+
+        &__content {
+            min-height: 190px;
+            padding: 20px;
+        }
+    }
+}

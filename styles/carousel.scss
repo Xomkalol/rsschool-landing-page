@@ -96,4 +96,66 @@
     }
 }
 
+@media (max-width: 768px) {
 
+    .main__coffe-container {
+        min-height: auto;
+        margin-top: 60px;
+
+        h2 {
+            font-size: 32px;
+            line-height: 125%;
+            margin-bottom: 30px;
+        }
+    }
+
+    .coffe__carousel-container {
+        width: 100%;
+        gap: 15px;
+
+        .arrow {
+            flex-shrink: 0;
+            width: 40px;
+            height: 40px;
+        }
+
+        .carousel {
+            flex: 1;
+            min-width: 0;
+        }
+
+        .coffe-container {
+            width: 100%;
+            max-width: 300px;
+
+            img {
+                width: 100%;
+                max-width: 250px;
+                height: auto;
+            }
+
+            .coffe__description {
+                gap: 10px;
+            }
+
+            h3 {
+                font-size: 16px;
+                line-height: 125%;
+            }
+
+            p {
+                font-size: 12px;
+                line-height: 150%;
+            }
+
+            span {
+                font-size: 16px;
+            }
+
+            .slider-dot {
+                width: 40px;
+                height: 4px;
+            }
+        }
+    }
+}

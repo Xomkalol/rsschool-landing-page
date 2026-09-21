@@ -71,3 +71,47 @@
         }
     }
 }
+
+@media (max-width: 768px) {
+
+    .footer__container {
+        margin: 0 15px 15px;
+        padding: 40px 20px;
+        max-height: none;
+
+        flex-direction: column;
+        gap: 50px;
+
+        border-radius: 15px;
+    }
+
+    .footer__social-container {
+        max-width: none;
+
+        h2 {
+            font-size: 32px;
+            line-height: 125%;
+        }
+
+        button {
+            width: 40px;
+            height: 40px;
+        }
+    }
+
+    .footer__contacts-container {
+        gap: 20px;
+
+        h3 {
+            font-size: 16px;
+        }
+
+        .contacts {
+            gap: 10px;
+
+            div {
+                font-size: 12px;
+            }
+        }
+    }
+}

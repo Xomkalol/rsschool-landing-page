@@ -113,3 +113,33 @@ nav {
         height: 20px;
     }
 }
+
+@media (max-width: 768px) {
+
+    header {
+        margin: 16px 0;
+    }
+
+    .header__container {
+        padding: 0 15px;
+    }
+
+    nav {
+        display: none;
+    }
+
+    .header__logo-container {
+        img {
+            width: 100px;
+            height: 60px;
+        }
+    }
+
+    .header__actions-container {
+        gap: 15px;
+    }
+
+    .actions__menu-container {
+        display: flex;
+    }
+}
