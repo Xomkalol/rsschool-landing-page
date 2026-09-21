@@ -1,0 +1,51 @@
+@use 'fonts';
+@use 'colors';
+@use 'assets';
+
+.main__grid {
+    width: 100%;
+    margin-bottom: 100px;
+}
+
+.grid-container {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    text-align:justify;
+    h2 {
+        @extend %heading-2;
+
+        span {
+            font-style: italic;
+            color: fonts.$text-accent;
+        }
+    }
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+
+    &__column {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+    }
+     img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 25px;
+    }
+
+    &__column:first-child img:first-child,
+    &__column:last-child img:last-child {
+        height: 500px;
+    }
+
+    &__column:first-child img:last-child,
+    &__column:last-child img:first-child {
+        height: 300px;
+    }
+}
