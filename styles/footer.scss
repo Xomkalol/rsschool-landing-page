@@ -44,7 +44,7 @@
 
     button:hover {
         color: fonts.$text-primary;
-        background-color: colors.$background-page;
+        background-color: var(--background-page);
     }
 }
 

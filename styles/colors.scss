@@ -1,3 +1,11 @@
+:root {
+    --background-page: #E1D4C9;
+    --dark-background-page: #292826;
+}
+
+[data-theme="dark"] {
+    --background-page: var(--dark-background-page);
+}
 
 $background-page: #E1D4C9;
 $background-container: #665F55;

@@ -1,5 +1,5 @@
 @use 'colors';
 body {
-  background-color: colors.$background-page;
+  background-color: var(--background-page);
   width: 100%;
 }

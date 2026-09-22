@@ -45,11 +45,20 @@
   line-height: 150%;
 }
 
+:root {
+  --background-page: #E1D4C9;
+  --dark-background-page: #292826;
+}
+
+[data-theme=dark] {
+  --background-page: var(--dark-background-page);
+}
+
 .app__button-container button, .main__video-container a {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #E1D4C9;
+  background-color: var(--background-page);
   height: 64px;
   width: 200px;
   border-radius: 25px;
@@ -216,7 +225,7 @@ main {
 }
 .footer__social-container button:hover {
   color: #403F3D;
-  background-color: #E1D4C9;
+  background-color: var(--background-page);
 }
 
 .footer__contacts-container {
@@ -306,7 +315,7 @@ main {
   }
 }
 body {
-  background-color: #E1D4C9;
+  background-color: var(--background-page);
   width: 100%;
 }
 
