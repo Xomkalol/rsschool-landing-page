@@ -518,6 +518,10 @@ body {
   height: 100%;
   object-fit: cover;
   border-radius: 25px;
+  transition: transform 0.3s ease;
+}
+.grid img:hover {
+  transform: scale(0.9);
 }
 .grid__column:first-child img:first-child, .grid__column:last-child img:last-child {
   height: 500px;
@@ -1075,13 +1079,21 @@ table {
   display: block;
   width: 100%;
   height: 100%;
+  transition: transform 0.3s ease;
   object-fit: cover;
+  border-radius: 40px;
+}
+.coffee-card:hover {
+  cursor: pointer;
+}
+.coffee-card:hover .coffee-card__image img {
+  transform: scale(0.9);
 }
 .coffee-card__content {
   display: flex;
   flex-direction: column;
   min-height: 200px;
-  padding: 20px 20px 20px;
+  padding: 20px;
 }
 .coffee-card__content h2 {
   margin-bottom: 10px;
