@@ -63,6 +63,10 @@ nav {
     }
 }
 
+.header__burger-button {
+    display: none;
+}
+
 .header__actions-container {
     display: flex;
     height: 44px;
@@ -140,7 +144,39 @@ nav {
     }
 
     .actions__menu-container {
-        display: flex;
+        display: none;
+    }
+
+    .header__burger-button {
+        display: block;
+        position: relative;
+        border: 1px solid colors.$border-primary;
+        width: 44px;
+        height: 44px;
+        border-radius: 30px;
+
+        .burger__line:nth-child(1) {
+            position: absolute ;
+            width: 30px;
+            height: 2px;
+            left: 7px;
+            top: 16px;
+            background-color: colors.$border-primary;
+        }
+
+        .burger__line:nth-child(2) {
+            position: absolute ;
+            width: 30px;
+            height: 2px;
+            left: 7px;
+            top: 24px;
+            background-color: colors.$border-primary;
+        }
+
+        &:hover {
+            background-color: colors.$border-accent;
+            cursor: pointer;
+        }
     }
 }
 
