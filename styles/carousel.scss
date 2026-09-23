@@ -1,0 +1,225 @@
+@use 'fonts';
+@use 'colors';
+@use 'assets';
+
+.main__coffe-container {
+    width: 100%;
+    min-height: 800px;
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    h2 {
+        @extend %heading-2;
+        text-align: center;
+        margin-bottom: 40px;
+        span {
+            color: colors.$accent;
+            font-style: italic;
+        }
+    }
+}
+
+.coffe__carousel-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+
+    .arrow {
+        display: flex;
+        flex-grow: 0;
+        align-items: center;
+        justify-content: center;
+        border: 2px solid;
+        border-radius: 35px;
+        border-color: fonts.$text-primary;
+        color: fonts.$text-primary;
+        height: 60px;
+        width: 60px;
+    }
+
+    .arrow:hover {
+        background-color: colors.$border-primary;
+        color: fonts.$text-inverse;
+        border-color: fonts.$text-inverse;
+    }
+
+    .carousel{
+        flex-grow: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .coffe-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        max-width: 480px;
+
+        .coffe__description {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            gap: 16px;
+        }
+
+        h3 {
+            @extend %heading-3;
+        }
+
+        p {
+            @extend %body-medium;
+            color: fonts.$text-primary;
+        }
+
+        span {
+            @extend %heading-3;
+        }
+
+        .slider-dot {
+            width: 40px;
+            height: 4px;
+            padding: 0;
+            border: none;
+            border-radius: 10px;
+            background-color: colors.$border-primary;
+
+            &.active {
+            background-color: fonts.$text-primary;
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+
+    .main__coffe-container {
+        min-height: auto;
+        margin-top: 60px;
+
+        h2 {
+            font-size: 32px;
+            line-height: 125%;
+            margin-bottom: 30px;
+        }
+    }
+
+    .coffe__carousel-container {
+        width: 100%;
+        gap: 15px;
+
+        .arrow {
+            flex-shrink: 0;
+            width: 40px;
+            height: 40px;
+        }
+
+        .carousel {
+            flex: 1;
+            min-width: 0;
+        }
+
+        .coffe-container {
+            width: 100%;
+            max-width: 300px;
+
+            img {
+                width: 100%;
+                max-width: 250px;
+                height: auto;
+            }
+
+            .coffe__description {
+                gap: 10px;
+            }
+
+            h3 {
+                font-size: 16px;
+                line-height: 125%;
+            }
+
+            p {
+                font-size: 12px;
+                line-height: 150%;
+            }
+
+            span {
+                font-size: 16px;
+            }
+
+            .slider-dot {
+                width: 40px;
+                height: 4px;
+            }
+        }
+    }
+}
+
+@media (max-width: 380px) {
+
+    .main__coffe-container {
+        margin-top: 40px;
+
+        h2 {
+            font-size: 24px;
+            line-height: 125%;
+            margin-bottom: 20px;
+        }
+    }
+
+    .coffe__carousel-container {
+        gap: 8px;
+
+        .arrow {
+            width: 32px;
+            height: 32px;
+            border-width: 1px;
+
+            svg {
+                width: 10px;
+                height: 10px;
+            }
+        }
+
+        .carousel {
+            min-width: 0;
+        }
+
+        .coffe-container {
+            max-width: 220px;
+
+            img {
+                width: 180px;
+                height: auto;
+            }
+
+            .coffe__description {
+                gap: 8px;
+            }
+
+            h3 {
+                font-size: 12px;
+                line-height: 125%;
+            }
+
+            p {
+                font-size: 8px;
+                line-height: 140%;
+            }
+
+            span {
+                font-size: 14px;
+            }
+
+            .slider-dot {
+                width: 20px;
+                height: 2px;
+            }
+        }
+    }
+}

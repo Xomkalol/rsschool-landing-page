@@ -1,0 +1,14 @@
+@use 'colors';
+@use 'fonts';
+
+%button-style {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: colors.$background-page;
+    height: 64px;
+    width: 200px;
+    border-radius: 25px;
+    padding: 0 20px;
+    @extend %action-text;
+}
