@@ -4,7 +4,8 @@ function getTheme () {
     if (theme === null) {
         theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
     }
-
+    console.log(theme);
+    setTheme(theme);
     localStorage.setItem('theme',theme);
     return theme;
 }
