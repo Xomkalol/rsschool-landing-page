@@ -1,5 +1,5 @@
 .coffee-card__content h2, .coffee-card__price, nav, .actions__menu-container {
-  color: #403F3D;
+  color: var(--text-primary);
   font-family: "Inter", sans-serif;
   font-size: 24px;
   font-weight: 600;
@@ -7,7 +7,7 @@
 }
 
 .main__video-container h1 {
-  color: #403F3D;
+  color: var(--text-primary);
   font-family: "Inter", sans-serif;
   font-size: 72px;
   font-weight: 600;
@@ -15,7 +15,7 @@
 }
 
 .menu__container h1, .app__about h2, .grid-container h2, .main__coffe-container h2, .footer__social-container h2 {
-  color: #403F3D;
+  color: var(--text-primary);
   font-family: "Inter", sans-serif;
   font-size: 60px;
   font-weight: 600;
@@ -23,7 +23,7 @@
 }
 
 .coffe__carousel-container .coffe-container h3, .coffe__carousel-container .coffe-container span, .footer__contacts-container h3 {
-  color: #403F3D;
+  color: var(--text-primary);
   font-family: "Inter", sans-serif;
   font-size: 24px;
   font-weight: 600;
@@ -39,7 +39,7 @@
 
 .menu__container .category, .app__button-container button span, .app__button-container button, .main__video-container a {
   font-family: "Inter", sans-serif;
-  color: #403F3D;
+  color: var(--text-primary);
   font-size: 16px;
   font-weight: 600;
   line-height: 150%;
@@ -47,11 +47,29 @@
 
 :root {
   --background-page: #E1D4C9;
+  --background-container: #665F55;
+  --inverse: #E1D4C9;
+  --accent: #B0907A;
+  --border-accent: #C1B6AD;
+  --border-primary: #665F55;
+  --text-primary: #403F3D;
   --dark-background-page: #292826;
+  --dark-background-container: #403F3D;
+  --dark-inverse: #E1D4C9;
+  --dark-accent: #B0907A;
+  --dark-border-accent: #665F55;
+  --dark-border-primary: #C1B6AD;
+  --dark-text-primary: #E1D4C9;
 }
 
 [data-theme=dark] {
   --background-page: var(--dark-background-page);
+  --background-container: var(--dark-background-container);
+  --inverse: var(--inverse);
+  --accent: var(--dark-accent);
+  --border-accent: var(--dark-border-accent);
+  --border-primary: var(--dark-border-primary);
+  --text-primary: var(--dark-text-primary);
 }
 
 .app__button-container button, .main__video-container a {
@@ -94,13 +112,13 @@ main {
   flex-direction: column;
 }
 .main__video-container h1 {
-  color: #E1D4C9;
+  color: var(--text-primary);
 }
 .main__video-container h1 span {
-  color: #B0907A;
+  color: var(--accent);
 }
 .main__video-container p {
-  color: #E1D4C9;
+  color: var(--text-primary);
 }
 .main__video-container a {
   display: flex;
@@ -189,7 +207,7 @@ main {
 }
 .footer__container {
   max-height: 450px;
-  background-color: #665F55;
+  background-color: var(--dark-background-container);
   margin: 0 40px;
   margin-bottom: 40px;
   border-radius: 15px;
@@ -204,10 +222,10 @@ main {
   max-width: 530px;
 }
 .footer__social-container h2 {
-  color: #B0907A;
+  color: var(--accent);
 }
 .footer__social-container h2 span {
-  color: #E1D4C9;
+  color: var(--inverse);
 }
 .footer__social-container .social {
   display: flex;
@@ -216,15 +234,15 @@ main {
 .footer__social-container button {
   width: 60px;
   height: 60px;
-  border: 1px solid #E1D4C9;
+  border: 1px solid var(--inverse);
   border-radius: 30px;
-  color: #E1D4C9;
+  color: var(--inverse);
   display: flex;
   justify-content: center;
   align-items: center;
 }
 .footer__social-container button:hover {
-  color: #403F3D;
+  color: var(--text-primary);
   background-color: var(--background-page);
 }
 
@@ -234,11 +252,11 @@ main {
   gap: 40px;
   flex-direction: column;
   justify-content: flex-start;
-  color: #E1D4C9;
+  color: var(--inverse);
   justify-content: center;
 }
 .footer__contacts-container h3 {
-  color: #E1D4C9;
+  color: var(--inverse);
 }
 .footer__contacts-container .contacts {
   display: flex;
@@ -331,7 +349,7 @@ body {
   margin-bottom: 40px;
 }
 .main__coffe-container h2 span {
-  color: #B0907A;
+  color: var(--accent);
   font-style: italic;
 }
 
@@ -348,15 +366,15 @@ body {
   justify-content: center;
   border: 2px solid;
   border-radius: 35px;
-  border-color: #403F3D;
-  color: #403F3D;
+  border-color: var(--text-primary);
+  color: var(--text-primary);
   height: 60px;
   width: 60px;
 }
 .coffe__carousel-container .arrow:hover {
   background-color: #665F55;
-  color: #E1D4C9;
-  border-color: #E1D4C9;
+  color: var(--inverse);
+  border-color: var(--inverse);
 }
 .coffe__carousel-container .carousel {
   flex-grow: 1;
@@ -381,7 +399,7 @@ body {
   gap: 16px;
 }
 .coffe__carousel-container .coffe-container p {
-  color: #403F3D;
+  color: var(--text-primary);
 }
 .coffe__carousel-container .coffe-container .slider-dot {
   width: 40px;
@@ -392,7 +410,7 @@ body {
   background-color: #665F55;
 }
 .coffe__carousel-container .coffe-container .slider-dot.active {
-  background-color: #403F3D;
+  background-color: var(--text-primary);
 }
 
 @media (max-width: 768px) {
@@ -509,7 +527,7 @@ body {
 }
 .grid-container h2 span {
   font-style: italic;
-  color: #B0907A;
+  color: var(--accent);
 }
 
 .grid {
@@ -625,10 +643,10 @@ body {
 }
 .app__about h2 span {
   font-style: italic;
-  color: #B0907A;
+  color: var(--accent);
 }
 .app__about p {
-  color: #403F3D;
+  color: var(--text-primary);
 }
 
 .app__button-container {
@@ -638,17 +656,17 @@ body {
 .app__button-container button {
   border: 1px solid;
   border-radius: 30px;
-  border-color: #403F3D;
+  border-color: var(--text-primary);
 }
 .app__button-container button:hover {
-  background-color: #403F3D;
-  color: #E1D4C9;
+  background-color: var(--text-primary);
+  color: var(--inverse);
 }
 .app__button-container button:hover span {
-  color: #E1D4C9;
+  color: var(--inverse);
 }
 .app__button-container button:hover svg {
-  color: #E1D4C9;
+  color: var(--inverse);
 }
 
 @media (max-width: 768px) {
@@ -811,10 +829,10 @@ nav ul a:hover::after {
   height: 36px;
 }
 .header__actions-container .actions__theme-container .theme-light {
-  background-color: #B0907A;
+  background-color: var(--accent);
 }
 .header__actions-container .actions__theme-container .theme-dark {
-  color: #403F3D;
+  color: var(--text-primary);
 }
 .header__actions-container a {
   display: flex;
@@ -997,7 +1015,7 @@ table {
   max-width: 800px;
 }
 .menu__container h1 span {
-  color: #B0907A;
+  color: var(--accent);
   font-style: italic;
 }
 .menu__container .menu__categories {
@@ -1077,7 +1095,7 @@ table {
   overflow: hidden;
   border: 1px solid #665F55;
   border-radius: 40px;
-  color: #403F3D;
+  color: var(--text-primary);
 }
 .coffee-card__image {
   width: 100%;

@@ -5,7 +5,7 @@ $text-accent: #B0907A;
 $font-primary: 'Inter', sans-serif;
 
 %text-primary {
-    color: $text-primary;
+    color: var(--text-primary);
     font-family: $font-primary;
     font-size: 24px;
     font-weight: 600;
@@ -13,7 +13,7 @@ $font-primary: 'Inter', sans-serif;
 }
 
 %heading-1 {
-    color: $text-primary;
+    color: var(--text-primary);
     font-family: $font-primary;
     font-size: 72px;
     font-weight: 600;
@@ -21,7 +21,7 @@ $font-primary: 'Inter', sans-serif;
 }
 
 %heading-2 {
-    color: $text-primary;
+    color: var(--text-primary);
     font-family: $font-primary;
     font-size: 60px;
     font-weight: 600;
@@ -29,7 +29,7 @@ $font-primary: 'Inter', sans-serif;
 }
 
 %heading-3 {
-    color: $text-primary;
+    color: var(--text-primary);
     font-family: $font-primary;
     font-size: 24px;
     font-weight: 600;
@@ -45,7 +45,7 @@ $font-primary: 'Inter', sans-serif;
 
 %action-text {
      font-family: $font-primary;
-     color: $text-primary;
+     color: var(--text-primary);
      font-size: 16px;
     font-weight: 600;
     line-height:  150%;

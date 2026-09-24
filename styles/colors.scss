@@ -1,15 +1,34 @@
 :root {
     --background-page: #E1D4C9;
+    --background-container: #665F55;
+    --inverse: #E1D4C9;
+    --accent: #B0907A;
+    --border-accent: #C1B6AD;
+    --border-primary: #665F55;
+    --text-primary: #403F3D;
+
     --dark-background-page: #292826;
-}
+    --dark-background-container: #403F3D;
+    --dark-inverse: #E1D4C9;
+    --dark-accent: #B0907A;
+    --dark-border-accent: #665F55;
+    --dark-border-primary: #C1B6AD;
+    --dark-text-primary: #E1D4C9;
+}   
 
 [data-theme="dark"] {
     --background-page: var(--dark-background-page);
+    --background-container: var(--dark-background-container);
+    --inverse: var(--inverse);
+    --accent: var(--dark-accent);
+    --border-accent: var(--dark-border-accent);
+    --border-primary: var(--dark-border-primary);
+    --text-primary: var(--dark-text-primary);
 }
 
-$background-page: #E1D4C9;
-$background-container: #665F55;
-$inverse: #E1D4C9;
-$accent: #B0907A;
+//$background-page: #E1D4C9;
+//$background-container: #665F55;
+//$inverse: #E1D4C9;
+//$accent: #B0907A;
 $border-accent: #C1B6AD;
 $border-primary: #665F55;

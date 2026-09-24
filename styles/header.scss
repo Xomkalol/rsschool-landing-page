@@ -92,11 +92,11 @@ nav {
         }
 
         .theme-light {
-            background-color: colors.$accent;
+            background-color: var(--accent);
         }
 
        .theme-dark {
-            color:fonts.$text-primary;
+            color:var(--text-primary);
         } 
     }
 

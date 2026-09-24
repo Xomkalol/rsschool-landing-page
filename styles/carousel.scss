@@ -13,7 +13,7 @@
         text-align: center;
         margin-bottom: 40px;
         span {
-            color: colors.$accent;
+            color: var(--accent);
             font-style: italic;
         }
     }
@@ -32,16 +32,16 @@
         justify-content: center;
         border: 2px solid;
         border-radius: 35px;
-        border-color: fonts.$text-primary;
-        color: fonts.$text-primary;
+        border-color: var(--text-primary);
+        color: var(--text-primary);
         height: 60px;
         width: 60px;
     }
 
     .arrow:hover {
         background-color: colors.$border-primary;
-        color: fonts.$text-inverse;
-        border-color: fonts.$text-inverse;
+        color: var(--inverse);
+        border-color: var(--inverse);
     }
 
     .carousel{
@@ -74,7 +74,7 @@
 
         p {
             @extend %body-medium;
-            color: fonts.$text-primary;
+            color: var(--text-primary);
         }
 
         span {
@@ -90,7 +90,7 @@
             background-color: colors.$border-primary;
 
             &.active {
-            background-color: fonts.$text-primary;
+            background-color: var(--text-primary);
             }
         }
     }

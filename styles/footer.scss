@@ -5,7 +5,7 @@
 .footer__container {
    // width: 100%;
     max-height: 450px;
-    background-color: colors.$background-container;
+    background-color: var(--dark-background-container);
     margin: 0 40px;
     margin-bottom: 40px;
     border-radius: 15px;
@@ -21,9 +21,9 @@
     
     h2 {
         @extend %heading-2;
-        color: fonts.$text-accent;
+        color: var(--accent);
         span {
-           color: fonts.$text-inverse;
+           color: var(--inverse);
         }
     }
 
@@ -34,16 +34,16 @@
     button {
         width: 60px;
         height: 60px;
-        border: 1px solid fonts.$text-inverse;
+        border: 1px solid var(--inverse);
         border-radius: 30px;
-        color: fonts.$text-inverse;
+        color: var(--inverse);
         display: flex;
         justify-content: center;
         align-items: center;
     }
 
     button:hover {
-        color: fonts.$text-primary;
+        color: var(--text-primary);
         background-color: var(--background-page);
     }
 }
@@ -54,12 +54,12 @@
     gap: 40px;
     flex-direction: column;
     justify-content: flex-start;
-    color: fonts.$text-inverse;
+    color: var(--inverse);
     justify-content: center;
 
     h3 {
         @extend %heading-3;
-        color: fonts.$text-inverse;
+        color: var(--inverse);
     }
 
     .contacts {

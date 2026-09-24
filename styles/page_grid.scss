@@ -18,7 +18,7 @@
     border: 1px solid colors.$border-primary;
     border-radius: 40px;
 
-    color: fonts.$text-primary;
+    color: var(--text-primary);
 
     &__image {
         width: 100%;

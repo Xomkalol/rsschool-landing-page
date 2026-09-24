@@ -6,7 +6,6 @@ function getTheme () {
     }
 
     localStorage.setItem('theme',theme);
-    console.log(theme);
     return theme;
 }
 
