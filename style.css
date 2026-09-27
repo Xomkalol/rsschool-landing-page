@@ -404,6 +404,7 @@ body.active {
   justify-content: center;
   align-items: center;
   max-width: 480px;
+  transition: 0.3s ease;
 }
 .coffe__carousel-container .coffe-container {
   display: flex;

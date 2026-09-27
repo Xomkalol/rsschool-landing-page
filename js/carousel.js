@@ -2,7 +2,6 @@ function setEventListenerOnArrow(moveLeft, moveRight) {
    const leftButton =  document.querySelector('.left');
    const rightButton =  document.querySelector('.right');
    
-   console.log(leftButton);
     leftButton.addEventListener('click', () => {
        moveLeft();
     })
@@ -54,5 +53,4 @@ function carousel() {
 
 }
 
-// setEventListenerOnArrow();
  carousel();
