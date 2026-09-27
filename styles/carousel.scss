@@ -17,6 +17,25 @@
             font-style: italic;
         }
     }
+
+    .carousel__slider-container {
+        display: flex;
+        justify-content: center;
+        gap: 5px;
+    }
+    
+        .slider-dot {
+            width: 40px;
+            height: 4px;
+            padding: 0;
+            border: none;
+            border-radius: 10px;
+            background-color: colors.$border-primary;
+
+            &.active {
+            background-color: var(--text-primary);
+            }
+        }
 }
 
 .coffe__carousel-container {
@@ -79,19 +98,6 @@
 
         span {
             @extend %heading-3;
-        }
-
-        .slider-dot {
-            width: 40px;
-            height: 4px;
-            padding: 0;
-            border: none;
-            border-radius: 10px;
-            background-color: colors.$border-primary;
-
-            &.active {
-            background-color: var(--text-primary);
-            }
         }
     }
 }
