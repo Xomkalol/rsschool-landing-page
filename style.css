@@ -374,7 +374,7 @@ body.active {
 
 .coffe__carousel-container {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   flex-grow: 1;
 }
@@ -395,19 +395,22 @@ body.active {
   color: var(--inverse);
   border-color: var(--inverse);
 }
+.coffe__carousel-container .carousel__container {
+  overflow: hidden;
+}
 .coffe__carousel-container .carousel {
   flex-grow: 1;
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 20px;
+  max-width: 480px;
 }
 .coffe__carousel-container .coffe-container {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  max-width: 480px;
+  min-width: 480px;
 }
 .coffe__carousel-container .coffe-container .coffe__description {
   display: flex;
