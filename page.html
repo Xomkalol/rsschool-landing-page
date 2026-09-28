@@ -20,10 +20,10 @@
             </div>
             <nav>
                 <ul>
-                    <li><a href="#">Favorite coffee</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Mobile app</a></li>
-                    <li><a href="#">Contact us</a></li>
+                    <li><a href="index.html#favorite">Favorite coffee</a></li>
+                    <li><a href="index.html#about">About</a></li>
+                    <li><a href="index.html#mobile__app">Mobile app</a></li>
+                    <li><a href="#contacts">Contact us</a></li>
                 </ul>
             </nav>
             <div class="header__actions-container">
@@ -53,10 +53,17 @@
                         <img src="/assets/coffee-cup.png" alt="coffee">
                     </a>
                 </div>
+                <div class="header__burger-button">
+                    <div class="burger__line"></div>
+                    <div class="burger__line"></div>
+                </div>
             </div>
         </div>
     </header>
     <main>
+        <div class="modal">
+        </div>
+
         <div class="menu__container">
                 <h1 class="menu__title">
                     Behind each of our cups
@@ -65,21 +72,21 @@
                 </h1>
                 <div class="menu__categories">
 
-                    <button class="category category--active" type="button">
+                    <button class="category category--active coffee" type="button">
                         <span class="category__icon">
                             <img src="assets/coffe.png" alt="coffe img">
                         </span>
                         <span>Coffee</span>
                     </button>
 
-                    <button class="category" type="button">
+                    <button class="category tea" type="button">
                         <span class="category__icon">
                            <img src="assets/tea.png" alt="tea img">
                         </span>
                         <span>Tea</span>
                     </button>
 
-                    <button class="category" type="button">
+                    <button class="category dessert" type="button">
                         <span class="category__icon">
                             <img src="assets/dessert.png" alt="dessert img">
                         </span>
@@ -89,7 +96,7 @@
             </div>
         <div class="coffee-grid">
 
-                    <article class="coffee-card">
+<!--                     <article class="coffee-card">
 
                         <div class="coffee-card__image">
                             <img
@@ -285,11 +292,11 @@
                             </span>
                         </div>
 
-                    </article>
+                    </article> -->
 
                 </div>
     </main>
-        <footer>
+        <footer id="contacts">
         <div class="footer__container">
             <div class="footer__social-container">
                 <h2><span>Sip, Savor, Smile.</span>It’s coffee time!</h2>
@@ -346,5 +353,8 @@
             </div>
         </div>
     </footer>
+    <script src="js/script.js"></script>
+    <script src="js/products.js"></script>
+    <script src="js/burger.js"></script>
 </body>
 </html>

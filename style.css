@@ -1,5 +1,5 @@
 .coffee-card__content h2, .coffee-card__price, nav, .actions__menu-container {
-  color: #403F3D;
+  color: var(--text-primary);
   font-family: "Inter", sans-serif;
   font-size: 24px;
   font-weight: 600;
@@ -7,7 +7,7 @@
 }
 
 .main__video-container h1 {
-  color: #403F3D;
+  color: var(--text-primary);
   font-family: "Inter", sans-serif;
   font-size: 72px;
   font-weight: 600;
@@ -15,41 +15,68 @@
 }
 
 .menu__container h1, .app__about h2, .grid-container h2, .main__coffe-container h2, .footer__social-container h2 {
-  color: #403F3D;
+  color: var(--text-primary);
   font-family: "Inter", sans-serif;
   font-size: 60px;
   font-weight: 600;
   line-height: 125%;
 }
 
-.coffe__carousel-container .coffe-container h3, .coffe__carousel-container .coffe-container span, .footer__contacts-container h3 {
-  color: #403F3D;
+.modal__content-container .modal__description-container .description__title h3, .description__total, .coffe__carousel-container .coffe-container h3, .coffe__carousel-container .coffe-container span, .footer__contacts-container h3 {
+  color: var(--text-primary);
   font-family: "Inter", sans-serif;
   font-size: 24px;
   font-weight: 600;
   line-height: 125%;
 }
 
-.coffee-card__content p, .app__about p, .coffe__carousel-container .coffe-container p, .main__video-container p {
+.modal__content-container .modal__description-container .description__title p, .description__final, .coffee-card__content p, .app__about p, .coffe__carousel-container .coffe-container p, .main__video-container p {
   font-family: "Inter", sans-serif;
   font-size: 16px;
   font-weight: 400;
   line-height: 150%;
 }
 
-.menu__container .category, .app__button-container button span, .app__button-container button, .main__video-container a {
+.description__close button, .menu__container .category, .app__button-container button span, .app__button-container button, .main__video-container a {
   font-family: "Inter", sans-serif;
-  color: #403F3D;
+  color: var(--text-primary);
   font-size: 16px;
   font-weight: 600;
   line-height: 150%;
+}
+
+:root {
+  --background-page: #E1D4C9;
+  --background-container: #665F55;
+  --inverse: #E1D4C9;
+  --accent: #B0907A;
+  --border-accent: #C1B6AD;
+  --border-primary: #665F55;
+  --text-primary: #403F3D;
+  --dark-background-page: #292826;
+  --dark-background-container: #403F3D;
+  --dark-inverse: #E1D4C9;
+  --dark-accent: #B0907A;
+  --dark-border-accent: #665F55;
+  --dark-border-primary: #C1B6AD;
+  --dark-text-primary: #E1D4C9;
+}
+
+[data-theme=dark] {
+  --background-page: var(--dark-background-page);
+  --background-container: var(--dark-background-container);
+  --inverse: var(--inverse);
+  --accent: var(--dark-accent);
+  --border-accent: var(--dark-border-accent);
+  --border-primary: var(--dark-border-primary);
+  --text-primary: var(--dark-text-primary);
 }
 
 .app__button-container button, .main__video-container a {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #E1D4C9;
+  background-color: var(--background-page);
   height: 64px;
   width: 200px;
   border-radius: 25px;
@@ -85,13 +112,13 @@ main {
   flex-direction: column;
 }
 .main__video-container h1 {
-  color: #E1D4C9;
+  color: var(--text-primary);
 }
 .main__video-container h1 span {
-  color: #B0907A;
+  color: var(--accent);
 }
 .main__video-container p {
-  color: #E1D4C9;
+  color: var(--text-primary);
 }
 .main__video-container a {
   display: flex;
@@ -180,7 +207,7 @@ main {
 }
 .footer__container {
   max-height: 450px;
-  background-color: #665F55;
+  background-color: var(--dark-background-container);
   margin: 0 40px;
   margin-bottom: 40px;
   border-radius: 15px;
@@ -195,10 +222,10 @@ main {
   max-width: 530px;
 }
 .footer__social-container h2 {
-  color: #B0907A;
+  color: var(--accent);
 }
 .footer__social-container h2 span {
-  color: #E1D4C9;
+  color: var(--inverse);
 }
 .footer__social-container .social {
   display: flex;
@@ -207,16 +234,16 @@ main {
 .footer__social-container button {
   width: 60px;
   height: 60px;
-  border: 1px solid #E1D4C9;
+  border: 1px solid var(--inverse);
   border-radius: 30px;
-  color: #E1D4C9;
+  color: var(--inverse);
   display: flex;
   justify-content: center;
   align-items: center;
 }
 .footer__social-container button:hover {
-  color: #403F3D;
-  background-color: #E1D4C9;
+  color: var(--text-primary);
+  background-color: var(--background-page);
 }
 
 .footer__contacts-container {
@@ -225,11 +252,11 @@ main {
   gap: 40px;
   flex-direction: column;
   justify-content: flex-start;
-  color: #E1D4C9;
+  color: var(--inverse);
   justify-content: center;
 }
 .footer__contacts-container h3 {
-  color: #E1D4C9;
+  color: var(--inverse);
 }
 .footer__contacts-container .contacts {
   display: flex;
@@ -306,8 +333,11 @@ main {
   }
 }
 body {
-  background-color: #E1D4C9;
-  width: 100%;
+  background-color: var(--background-page);
+}
+
+body.active {
+  overflow: hidden;
 }
 
 .main__coffe-container {
@@ -322,13 +352,29 @@ body {
   margin-bottom: 40px;
 }
 .main__coffe-container h2 span {
-  color: #B0907A;
+  color: var(--accent);
   font-style: italic;
+}
+.main__coffe-container .carousel__slider-container {
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+}
+.main__coffe-container .slider-dot {
+  width: 40px;
+  height: 4px;
+  padding: 0;
+  border: none;
+  border-radius: 10px;
+  background-color: #665F55;
+}
+.main__coffe-container .slider-dot.active {
+  background-color: var(--text-primary);
 }
 
 .coffe__carousel-container {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   flex-grow: 1;
 }
@@ -339,29 +385,33 @@ body {
   justify-content: center;
   border: 2px solid;
   border-radius: 35px;
-  border-color: #403F3D;
-  color: #403F3D;
+  border-color: var(--text-primary);
+  color: var(--text-primary);
   height: 60px;
   width: 60px;
 }
 .coffe__carousel-container .arrow:hover {
   background-color: #665F55;
-  color: #E1D4C9;
-  border-color: #E1D4C9;
+  color: var(--inverse);
+  border-color: var(--inverse);
+}
+.coffe__carousel-container .carousel__container {
+  overflow: hidden;
 }
 .coffe__carousel-container .carousel {
   flex-grow: 1;
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 20px;
+  max-width: 480px;
+  transition: 0.3s ease;
 }
 .coffe__carousel-container .coffe-container {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  max-width: 480px;
+  min-width: 480px;
 }
 .coffe__carousel-container .coffe-container .coffe__description {
   display: flex;
@@ -372,20 +422,8 @@ body {
   gap: 16px;
 }
 .coffe__carousel-container .coffe-container p {
-  color: #403F3D;
+  color: var(--text-primary);
 }
-.coffe__carousel-container .coffe-container .slider-dot {
-  width: 40px;
-  height: 4px;
-  padding: 0;
-  border: none;
-  border-radius: 10px;
-  background-color: #665F55;
-}
-.coffe__carousel-container .coffe-container .slider-dot.active {
-  background-color: #403F3D;
-}
-
 @media (max-width: 768px) {
   .main__coffe-container {
     min-height: auto;
@@ -500,7 +538,7 @@ body {
 }
 .grid-container h2 span {
   font-style: italic;
-  color: #B0907A;
+  color: var(--accent);
 }
 
 .grid {
@@ -518,6 +556,10 @@ body {
   height: 100%;
   object-fit: cover;
   border-radius: 25px;
+  transition: transform 0.3s ease;
+}
+.grid img:hover {
+  transform: scale(0.9);
 }
 .grid__column:first-child img:first-child, .grid__column:last-child img:last-child {
   height: 500px;
@@ -612,10 +654,10 @@ body {
 }
 .app__about h2 span {
   font-style: italic;
-  color: #B0907A;
+  color: var(--accent);
 }
 .app__about p {
-  color: #403F3D;
+  color: var(--text-primary);
 }
 
 .app__button-container {
@@ -625,17 +667,17 @@ body {
 .app__button-container button {
   border: 1px solid;
   border-radius: 30px;
-  border-color: #403F3D;
+  border-color: var(--text-primary);
 }
 .app__button-container button:hover {
-  background-color: #403F3D;
-  color: #E1D4C9;
+  background-color: var(--text-primary);
+  color: var(--inverse);
 }
 .app__button-container button:hover span {
-  color: #E1D4C9;
+  color: var(--inverse);
 }
 .app__button-container button:hover svg {
-  color: #E1D4C9;
+  color: var(--inverse);
 }
 
 @media (max-width: 768px) {
@@ -734,22 +776,34 @@ header {
 .header__logo-container {
   display: flex;
   align-items: center;
+  width: 100px;
+  min-width: 100px;
+  height: 60px;
+  flex-shrink: 0;
 }
 .header__logo-container img {
+  display: block;
   width: 100px;
+  min-width: 100px;
   height: 60px;
+  max-width: none;
+  object-fit: contain;
 }
 
 nav {
   display: flex;
   align-items: center;
+  width: 100%;
+  justify-content: space-between;
 }
 nav ul {
   display: flex;
   width: 100%;
   justify-content: space-between;
   align-items: center;
-  gap: 40px;
+}
+nav ul li {
+  text-align: center;
 }
 nav ul a {
   position: relative;
@@ -769,6 +823,13 @@ nav ul a::after {
 }
 nav ul a:hover::after {
   transform: scaleX(1);
+}
+nav .burger__menu-button {
+  display: none;
+}
+
+.header__burger-button {
+  display: none;
 }
 
 .header__actions-container {
@@ -794,10 +855,10 @@ nav ul a:hover::after {
   height: 36px;
 }
 .header__actions-container .actions__theme-container .theme-light {
-  background-color: #B0907A;
+  background-color: var(--accent);
 }
 .header__actions-container .actions__theme-container .theme-dark {
-  color: #403F3D;
+  color: var(--text-primary);
 }
 .header__actions-container a {
   display: flex;
@@ -815,14 +876,55 @@ nav ul a:hover::after {
 }
 
 @media (max-width: 768px) {
-  header {
-    margin: 16px 0;
-  }
   .header__container {
-    padding: 0 15px;
+    padding: 0px;
+  }
+  .header__container.active {
+    position: absolute;
+    left: 0;
+    top: 20px;
+    width: 100%;
+    min-height: 100vh;
+    z-index: 99;
+    background-color: var(--background-page);
+  }
+  .header__container.active nav {
+    display: flex;
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    flex: 1;
+  }
+  .header__container.active nav ul {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    gap: 60px;
+  }
+  .header__container.active nav ul .burger__menu-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+  }
+  .header__container.active nav ul .burger__menu-button img {
+    width: 20px;
+    height: 20px;
+  }
+  .header__container.active .header__logo-container {
+    align-items: start;
   }
   nav {
-    display: none;
+    display: flex;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-20px);
+    transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s ease;
+  }
+  nav ul {
+    gap: 0;
   }
   .header__logo-container img {
     width: 100px;
@@ -832,7 +934,45 @@ nav ul a:hover::after {
     gap: 15px;
   }
   .actions__menu-container {
-    display: flex;
+    display: none;
+  }
+  .header__burger-button {
+    display: block;
+    position: relative;
+    border: 1px solid #665F55;
+    width: 44px;
+    height: 44px;
+    border-radius: 30px;
+  }
+  .header__burger-button .burger__line:nth-child(1) {
+    position: absolute;
+    width: 30px;
+    height: 2px;
+    left: 7px;
+    top: 16px;
+    background-color: #665F55;
+    transition: transform 0.3s ease, top 0.3s ease;
+  }
+  .header__burger-button .burger__line:nth-child(2) {
+    position: absolute;
+    width: 30px;
+    height: 2px;
+    left: 7px;
+    top: 24px;
+    background-color: #665F55;
+    transition: transform 0.3s ease, top 0.3s ease;
+  }
+  .header__burger-button:hover {
+    background-color: #C1B6AD;
+    cursor: pointer;
+  }
+  .header__burger-button.active .burger__line:nth-child(1) {
+    transform: rotate(45deg);
+    top: 20px;
+  }
+  .header__burger-button.active .burger__line:nth-child(2) {
+    transform: rotate(-45deg);
+    top: 20px;
   }
 }
 @media (max-width: 380px) {
@@ -844,10 +984,12 @@ nav ul a:hover::after {
     padding: 0 8px;
     max-height: 50px;
   }
-  .header__logo-container img {
-    width: 70px;
-    height: auto;
-  }
+  /*   .header__logo-container {
+         img {
+             width: 70px;
+             height: auto;
+         }
+     } */
   .header__actions-container {
     height: 40px;
     gap: 8px;
@@ -952,7 +1094,7 @@ table {
   max-width: 800px;
 }
 .menu__container h1 span {
-  color: #B0907A;
+  color: var(--accent);
   font-style: italic;
 }
 .menu__container .menu__categories {
@@ -1019,6 +1161,138 @@ table {
     padding: 4px;
   }
 }
+.modal {
+  display: none;
+}
+
+.modal.active {
+  display: block;
+  position: fixed;
+  inset: 0;
+  z-index: 99;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal__content-container {
+  width: 800px;
+  min-height: 500px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: var(--background-page);
+  border-radius: 30px;
+  padding: 16px;
+}
+.modal__content-container .modal__content {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+.modal__content-container .modal__img-container {
+  border-radius: 25px;
+  overflow: hidden;
+  width: 100%;
+}
+.modal__content-container .modal__img-container img {
+  width: 340px;
+  height: 340px;
+}
+.modal__content-container .modal__description-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.modal__content-container .modal__description-container .description__title {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.modal__content-container .modal__description-container .description__title h3 {
+  color: var(--text-primary);
+}
+.modal__content-container .modal__description-container .description__title p {
+  color: var(--text-primary);
+}
+.modal__content-container .modal__description-container .description__size-container {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.modal__content-container .modal__description-container .description__size-container > span {
+  width: 100%;
+  margin-bottom: 4px;
+}
+.modal__content-container .modal__description-container .size__button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  height: 46px;
+  padding: 4px 16px 4px 4px;
+  border: 1px solid var(--border-accent);
+  border-radius: 24px;
+  cursor: pointer;
+}
+.modal__content-container .modal__description-container .size__button > div {
+  width: 38px;
+  height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: var(--background-page);
+  font-weight: 600;
+}
+.modal__content-container .modal__description-container .size__button > span {
+  font-weight: 600;
+}
+.modal__content-container .modal__description-container .size__button:hover {
+  background-color: var(--border-accent);
+}
+
+.size__button--active {
+  background-color: var(--border-primary);
+  border-color: var(--border-primary);
+  color: white;
+}
+.size__button--active > div {
+  background-color: var(--background-page);
+  color: var(--border-primary);
+}
+
+.description__total {
+  display: flex;
+  justify-content: space-between;
+  color: var(--text-primary);
+}
+
+.description__final {
+  display: flex;
+  gap: 8px;
+  font-size: 12px;
+  color: var(--text-primary);
+}
+
+.description__close {
+  width: 100%;
+}
+
+.description__close button {
+  width: 100%;
+  height: 50px;
+  border: 1px solid var(--border-primary);
+  border-radius: 25px;
+  background: transparent;
+  color: var(--text-primary);
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.description__close button:hover {
+  background-color: #C1B6AD;
+}
+
 .coffee-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -1030,9 +1304,9 @@ table {
 
 .coffee-card {
   overflow: hidden;
-  border: 1px solid #665F55;
+  border: 1px solid var(--border-primary);
   border-radius: 40px;
-  color: #403F3D;
+  color: var(--text-primary);
 }
 .coffee-card__image {
   width: 100%;
@@ -1043,13 +1317,21 @@ table {
   display: block;
   width: 100%;
   height: 100%;
+  transition: transform 0.3s ease;
   object-fit: cover;
+  border-radius: 40px;
+}
+.coffee-card:hover {
+  cursor: pointer;
+}
+.coffee-card:hover .coffee-card__image img {
+  transform: scale(0.9);
 }
 .coffee-card__content {
   display: flex;
   flex-direction: column;
   min-height: 200px;
-  padding: 20px 20px 20px;
+  padding: 20px;
 }
 .coffee-card__content h2 {
   margin-bottom: 10px;

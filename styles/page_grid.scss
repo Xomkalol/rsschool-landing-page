@@ -2,6 +2,166 @@
 @use 'colors';
 @use 'assets';
 
+.modal {
+    display: none;
+}
+
+.modal.active {
+    display: block;
+    position: fixed;
+    inset: 0;
+    z-index: 99;
+   background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal__content-container {
+    width: 800px;
+    min-height: 500px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--background-page);
+    border-radius: 30px;
+    padding: 16px;
+
+    .modal__content {
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+    }
+    .modal__img-container {
+        border-radius: 25px;
+        overflow: hidden;
+        width: 100%;
+
+        img {
+            width: 340px;
+            height: 340px;
+        }
+    }
+
+    .modal__description-container {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        .description__title {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            h3 {
+                @extend %heading-3;
+                color: var(--text-primary);
+            }
+
+            p {
+                @extend %body-medium;
+                color:var(--text-primary);
+            }
+        }
+    .description__size-container {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+
+    > span {
+        width: 100%;
+        margin-bottom: 4px;
+    }
+}
+
+.size__button {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    height: 46px;
+    padding: 4px 16px 4px 4px;
+
+    border: 1px solid var(--border-accent);
+    border-radius: 24px;
+
+    cursor: pointer;
+
+    > div {
+        width: 38px;
+        height: 38px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        border-radius: 50%;
+        background-color: var(--background-page);
+
+        font-weight: 600;
+    }
+
+    > span {
+        font-weight: 600;
+    }
+
+    &:hover {
+        background-color: var(--border-accent);
+    }
+        }
+    }
+}
+
+.size__button--active {
+    background-color: var(--border-primary);
+    border-color: var(--border-primary);
+    color: white;
+
+    > div {
+        background-color: var(--background-page);
+        color: var(--border-primary);
+    }
+}
+
+
+.description__total {
+    display: flex;
+    justify-content: space-between;
+    
+    @extend %heading-3;
+    color: var(--text-primary);
+}
+
+.description__final {
+    display: flex;
+    gap:8px;
+
+    @extend %body-medium;
+    font-size: 12px;
+    color: var(--text-primary);
+}
+
+.description__close {
+    width: 100%;
+}
+
+.description__close button {
+    width: 100%;
+    height: 50px;
+
+    border: 1px solid var(--border-primary);
+    border-radius: 25px;
+
+    background: transparent;
+    color: var(--text-primary);
+    @extend %action-text;
+
+    cursor: pointer;
+
+    transition: background-color 0.2s ease;
+}
+
+.description__close button:hover {
+    background-color: colors.$border-accent;
+}
 
 .coffee-grid {
     display: grid;
@@ -15,23 +175,30 @@
 .coffee-card {
     overflow: hidden;
 
-    border: 1px solid colors.$border-primary;
+    border: 1px solid var(--border-primary);
     border-radius: 40px;
 
-    color: fonts.$text-primary;
+    color: var(--text-primary);
 
     &__image {
         width: 100%;
         height: 300px;
-
         overflow: hidden;
 
         img {
             display: block;
             width: 100%;
             height: 100%;
-
+            transition: transform 0.3s ease;
             object-fit: cover;
+            border-radius: 40px;
+        }
+    }
+
+    &:hover {
+        cursor: pointer;
+        .coffee-card__image img {
+            transform: scale(0.9);
         }
     }
 
@@ -40,26 +207,22 @@
         flex-direction: column;
 
         min-height: 200px;
-        padding: 20px 20px 20px;
+        padding: 20px;
 
         h2 {
             margin-bottom: 10px;
-
             @extend %text-primary;
         }
 
         p {
             @extend %body-medium;
-
             margin-bottom: auto;
         }
     }
 
     &__price {
         display: block;
-
         margin-top: 20px;
-
         @extend %text-primary;
     }
 }

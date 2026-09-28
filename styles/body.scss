@@ -1,5 +1,7 @@
 @use 'colors';
 body {
-  background-color: colors.$background-page;
-  width: 100%;
+  background-color: var(--background-page);
+}
+body.active {
+  overflow: hidden;
 }

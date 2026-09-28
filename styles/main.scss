@@ -34,16 +34,16 @@ main {
 
     h1 {
         @extend %heading-1;
-        color:fonts.$text-inverse;
+        color: var(--text-primary);
 
         span {
-            color:fonts.$text-accent;
+            color:var(--accent);
         }
     }
 
     p {
         @extend %body-medium;
-        color:fonts.$text-inverse;
+        color:var(--text-primary);
     }
 
     a {
