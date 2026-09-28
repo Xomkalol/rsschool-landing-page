@@ -24,6 +24,12 @@
                     <li><a href="#about">About</a></li>
                     <li><a href="#mobile__app">Mobile app</a></li>
                     <li><a href="#contacts">Contact us</a></li>
+                    <li>                    
+                        <a href="page.html" class="burger__menu-button">
+                        <span>Menu</span>
+                        <img src="/assets/coffee-cup.png" alt="coffee">
+                        </a>
+                    </li>
                 </ul>
             </nav>
             <div class="header__actions-container">
@@ -50,7 +56,7 @@
                 <div class="actions__menu-container">
                     <a href="page.html">
                         <span>Menu</span>
-                        <img src="/assets/coffee-cup.png" alt="coffee">
+                        <img src="./assets/coffee-cup.png" alt="coffee">
                     </a>
                 </div>
                 <div class="header__burger-button">
@@ -81,14 +87,29 @@
         <section class="main__coffe-container" id="favorite">
             <h2>Choose your <span>favorite</span> coffee</h2>
             <div class="coffe__carousel-container">
-                <button class="arrow">
+                <button class="left arrow">
                     <svg width="14" height="13" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M13 6.5H0.5M6.5 12.5L0.5 6.5L6.5 0.5" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
                     </svg>
                 </button>
-                <div class="carousel">
-                    <div class="coffe-container">
-                        <img alt="coffe img" src="/assets/coffee-slider-1.png">
+                <div class="carousel__container">
+                    <div class="carousel">
+                        <div class="coffe-container">
+                        <img alt="coffe machiato" src="./assets/coffee-slider-2.png">
+                        <div class="coffe__description">
+                        <h3>
+                            Caramel Macchiato
+                        </h3>
+                        <p>
+                            Fragrant and unique classic espresso with rich caramel-peanut syrup, with cream under whipped thick foam.
+                        </p>
+                        <span>
+                            $5.00
+                        </span>
+                        </div>
+                        </div>
+                        <div class="coffe-container">
+                        <img alt="coffe img" src="./assets/coffee-slider-1.png">
                         <div class="coffe__description">
                         <h3>
                             S’mores Frappuccino
@@ -100,19 +121,34 @@
                             $5.50
                         </span>
                         </div>
-                        <div class="carousel__slider-container">
-                            <button class="slider-dot active"></button>
-                            <button class="slider-dot"></button>
-                            <button class="slider-dot"></button>
+                        </div>
+                        <div class="coffe-container">
+                        <img alt="ice coffe image" src="./assets/coffee-slider-3.png">
+                        <div class="coffe__description">
+                        <h3>
+                           Ice coffee
+                        </h3>
+                        <p>
+                            A popular summer drink that tones and invigorates. Prepared from coffee, milk and ice.
+                        </p>
+                        <span>
+                            $4.50
+                        </span>
                         </div>
                     </div>
                 </div>
-                <button class="arrow">
+                </div>
+                <button class="right arrow">
                     <svg width="14" height="13" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M0.5 6.5H13M7 12.5L13 6.5L7 0.5" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
                     </svg>
                 </button>
             </div>
+                    <div class="carousel__slider-container">
+                            <button class="slider-dot active"></button>
+                            <button class="slider-dot"></button>
+                            <button class="slider-dot"></button>
+                    </div>
         </section>
         <section class="main__grid" id="about">
             <div class="grid-container">
@@ -226,5 +262,7 @@
         </div>
     </footer>
     <script src="js/script.js"></script>
+    <script src="js/burger.js"></script>
+    <script src="js/carousel.js"></script>
 </body>
 </html>

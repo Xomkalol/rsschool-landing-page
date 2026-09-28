@@ -17,11 +17,30 @@
             font-style: italic;
         }
     }
+
+    .carousel__slider-container {
+        display: flex;
+        justify-content: center;
+        gap: 5px;
+    }
+    
+        .slider-dot {
+            width: 40px;
+            height: 4px;
+            padding: 0;
+            border: none;
+            border-radius: 10px;
+            background-color: colors.$border-primary;
+
+            &.active {
+            background-color: var(--text-primary);
+            }
+        }
 }
 
 .coffe__carousel-container {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     flex-grow: 1;
 
@@ -43,13 +62,16 @@
         color: var(--inverse);
         border-color: var(--inverse);
     }
-
+    .carousel__container {
+        overflow: hidden;
+    }
     .carousel{
         flex-grow: 1;
         display: flex;
         justify-content: center;
         align-items: center;
-        gap: 20px;
+        max-width: 480px;
+        transition: 0.3s ease;
     }
 
     .coffe-container {
@@ -57,7 +79,7 @@
         justify-content: center;
         align-items: center;
         flex-direction: column;
-        max-width: 480px;
+        min-width: 480px;
 
         .coffe__description {
             display: flex;
@@ -79,19 +101,6 @@
 
         span {
             @extend %heading-3;
-        }
-
-        .slider-dot {
-            width: 40px;
-            height: 4px;
-            padding: 0;
-            border: none;
-            border-radius: 10px;
-            background-color: colors.$border-primary;
-
-            &.active {
-            background-color: var(--text-primary);
-            }
         }
     }
 }
