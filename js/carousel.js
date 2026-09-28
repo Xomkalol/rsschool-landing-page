@@ -12,6 +12,7 @@ function setEventListenerOnArrow(moveLeft, moveRight) {
 
 function carousel() {
     const carousel =  document.querySelector('.carousel');
+    const sliders = document.querySelectorAll('.slider-dot');
     let index = 1;
 
     function moveLeft () {
@@ -19,14 +20,26 @@ function carousel() {
                  case 0:
                    index = 2;
                    carousel.style.transform = 'translateX(-480px)';
+                   sliders.forEach(slider => {
+                     slider.classList.remove('active');
+                   })
+                   sliders[2].classList.add('active')
                    break;
                  case 1:
                     index = 0;
                     carousel.style.transform = 'translateX(+480px)';
+                     sliders.forEach(slider => {
+                     slider.classList.remove('active');
+                   })
+                   sliders[0].classList.add('active')
                    break;
                  case 2:
                     index = 1;
                     carousel.style.transform = 'translateX(0px)';
+                   sliders.forEach(slider => {
+                     slider.classList.remove('active');
+                   })
+                   sliders[1].classList.add('active')
                    break;
                 }
     }
@@ -36,14 +49,26 @@ function carousel() {
                  case 0:
                    index += 1;
                    carousel.style.transform = 'translateX(+0px)';
+                   sliders.forEach(slider => {
+                     slider.classList.remove('active');
+                   })
+                   sliders[1].classList.add('active')
                    break;
                  case 1:
                    index += 1;
                    carousel.style.transform = 'translateX(-480px)';
+                   sliders.forEach(slider => {
+                     slider.classList.remove('active');
+                   })
+                   sliders[2].classList.add('active')
                    break;
                  case 2:
                     index = 0;
                     carousel.style.transform = 'translateX(+480px)';
+                   sliders.forEach(slider => {
+                     slider.classList.remove('active');
+                   })
+                   sliders[0].classList.add('active')
                    break;
                 }
     }
