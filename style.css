@@ -22,7 +22,7 @@
   line-height: 125%;
 }
 
-.coffe__carousel-container .coffe-container h3, .coffe__carousel-container .coffe-container span, .footer__contacts-container h3 {
+.modal__content-container .modal__description-container .description__title h3, .description__total, .coffe__carousel-container .coffe-container h3, .coffe__carousel-container .coffe-container span, .footer__contacts-container h3 {
   color: var(--text-primary);
   font-family: "Inter", sans-serif;
   font-size: 24px;
@@ -30,14 +30,14 @@
   line-height: 125%;
 }
 
-.coffee-card__content p, .app__about p, .coffe__carousel-container .coffe-container p, .main__video-container p {
+.modal__content-container .modal__description-container .description__title p, .description__final, .coffee-card__content p, .app__about p, .coffe__carousel-container .coffe-container p, .main__video-container p {
   font-family: "Inter", sans-serif;
   font-size: 16px;
   font-weight: 400;
   line-height: 150%;
 }
 
-.menu__container .category, .app__button-container button span, .app__button-container button, .main__video-container a {
+.description__close button, .menu__container .category, .app__button-container button span, .app__button-container button, .main__video-container a {
   font-family: "Inter", sans-serif;
   color: var(--text-primary);
   font-size: 16px;
@@ -1161,6 +1161,138 @@ table {
     padding: 4px;
   }
 }
+.modal {
+  display: none;
+}
+
+.modal.active {
+  display: block;
+  position: fixed;
+  inset: 0;
+  z-index: 99;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal__content-container {
+  width: 800px;
+  min-height: 500px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: var(--background-page);
+  border-radius: 30px;
+  padding: 16px;
+}
+.modal__content-container .modal__content {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+.modal__content-container .modal__img-container {
+  border-radius: 25px;
+  overflow: hidden;
+  width: 100%;
+}
+.modal__content-container .modal__img-container img {
+  width: 340px;
+  height: 340px;
+}
+.modal__content-container .modal__description-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.modal__content-container .modal__description-container .description__title {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.modal__content-container .modal__description-container .description__title h3 {
+  color: var(--text-primary);
+}
+.modal__content-container .modal__description-container .description__title p {
+  color: var(--text-primary);
+}
+.modal__content-container .modal__description-container .description__size-container {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.modal__content-container .modal__description-container .description__size-container > span {
+  width: 100%;
+  margin-bottom: 4px;
+}
+.modal__content-container .modal__description-container .size__button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  height: 46px;
+  padding: 4px 16px 4px 4px;
+  border: 1px solid var(--border-accent);
+  border-radius: 24px;
+  cursor: pointer;
+}
+.modal__content-container .modal__description-container .size__button > div {
+  width: 38px;
+  height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: var(--background-page);
+  font-weight: 600;
+}
+.modal__content-container .modal__description-container .size__button > span {
+  font-weight: 600;
+}
+.modal__content-container .modal__description-container .size__button:hover {
+  background-color: var(--border-accent);
+}
+
+.size__button--active {
+  background-color: var(--border-primary);
+  border-color: var(--border-primary);
+  color: white;
+}
+.size__button--active > div {
+  background-color: var(--background-page);
+  color: var(--border-primary);
+}
+
+.description__total {
+  display: flex;
+  justify-content: space-between;
+  color: var(--text-primary);
+}
+
+.description__final {
+  display: flex;
+  gap: 8px;
+  font-size: 12px;
+  color: var(--text-primary);
+}
+
+.description__close {
+  width: 100%;
+}
+
+.description__close button {
+  width: 100%;
+  height: 50px;
+  border: 1px solid var(--border-primary);
+  border-radius: 25px;
+  background: transparent;
+  color: var(--text-primary);
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.description__close button:hover {
+  background-color: #C1B6AD;
+}
+
 .coffee-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -1172,7 +1304,7 @@ table {
 
 .coffee-card {
   overflow: hidden;
-  border: 1px solid #665F55;
+  border: 1px solid var(--border-primary);
   border-radius: 40px;
   color: var(--text-primary);
 }
