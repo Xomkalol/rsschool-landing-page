@@ -184,7 +184,7 @@ const products = [
     "description": "Espresso coffee with the addition of steamed milk and dense milk foam",
     "price": "5.50",
     "category": "coffee",
-    'img': './assets/latte.png',
+    'img': './assets/Latte.png',
     "sizes": {
       "s": {
         "size": "200 ml",
@@ -220,7 +220,7 @@ const products = [
     "description": "Espresso with frothed milk and chocolate",
     "price": "5.50",
     "category": "coffee",
-    'img': './assets/latte_macchiato.png',
+    'img': './assets/Latte_macchiato.png',
     "sizes": {
       "s": {
         "size": "200 ml",
